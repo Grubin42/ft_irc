@@ -7,7 +7,8 @@ CFLAGS = -Wextra -Werror -Wall -std=c++98
 SRCS_DIR = ./src
 OBJS_DIR = ./objs
 
-SRCS =	main.cpp \
+SRCS =	serveur.cpp \
+		client.cpp 
 		
 OBJS = $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.cpp=.o)))
 
