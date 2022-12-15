@@ -51,9 +51,11 @@ int main(int ac, char **av)
     n = read(newSockfd, buffer, 255);
     if (n < 0)
         std::cerr << "ERROR reading from socket" << std::endl;
-    std::cout << "Here is the message" << buffer << std::endl;
+    std::cout << "Here is the message: " << buffer << std::endl;
     n = write(newSockfd, "I got your message", 18);
     if (n < 0)
         std::cerr << "ERROR writing to socket" << std::endl;
+    close(sockfd);
+    close(newSockfd);
     return (0);
 }
